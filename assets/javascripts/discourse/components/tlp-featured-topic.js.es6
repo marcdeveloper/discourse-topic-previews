@@ -19,7 +19,7 @@ export default Ember.Component.extend({
             if (defaultThumbnail) {
               this.$('img.thumbnail').attr('src', defaultThumbnail);
             } else {
-              this.$().hide();
+              this.$('img.thumbnail').attr('src', avatar)
             }
           });
         }

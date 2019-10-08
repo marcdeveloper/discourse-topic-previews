@@ -19,7 +19,8 @@ export default Ember.Component.extend({
             if (defaultThumbnail) {
               this.$('img.thumbnail').attr('src', defaultThumbnail);
             } else {
-              this.$('img.thumbnail').attr('src', avatar )
+              const opts = helper.getOptions();
+              this.$('img.thumbnail').attr('src', opts.lookupAvatar(username) )
             }
           });
         }
